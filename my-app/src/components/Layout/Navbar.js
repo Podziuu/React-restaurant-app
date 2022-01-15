@@ -30,7 +30,7 @@ const Navbar = () => {
             />
           )}
           {hamVisible && (
-            <ul className="w-screen flex flex-col items-center absolute top-16 left-0 bg-[#faebd4] py-4 font-bold justify-evenly h-96">
+            <ul className="w-screen flex flex-col items-center absolute top-16 left-0 bg-[#faebd4] py-4 font-bold justify-evenly h-96 z-10">
               <li onClick={clickHandler} className="absolute w-6 top-4 right-4 cursor-pointer"><img src="https://cdn-icons.flaticon.com/png/512/2549/premium/2549969.png?token=exp=1642265912~hmac=4266f3f56ccaaef72b0699244c29cfe3" /></li>
               <li>About Us</li>
               <li>Menu</li>
