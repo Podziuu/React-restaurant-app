@@ -4,6 +4,7 @@ import Navbar from "./components/Layout/Navbar";
 import MainPart from "./components/Layout/MainPart";
 import PopularDishes from "./components/Layout/PopularDishes";
 import Container from "./components/Layout/Container";
+import MultipleService from "./components/Layout/MultipleService";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Container>
         <MainPart />
         <PopularDishes />
+        <MultipleService/>
       </Container>
     </div>
   );

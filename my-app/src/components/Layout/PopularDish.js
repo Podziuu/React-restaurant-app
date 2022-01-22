@@ -14,7 +14,7 @@ const PopularDish = (props) => {
             </div>
             <p className="text-center my-4">Pasta is a type of food typically made from an unleavened dough.</p>
             <div className='flex items-center justify-between w-full'>
-                <h3>$35.00</h3>
+                <h3 className="font-bold text-2xl">$35.00</h3>
                 <Button bg={true} text="Add To Cart" />
             </div>
         </div>
