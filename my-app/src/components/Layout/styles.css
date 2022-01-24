@@ -1,6 +1,8 @@
 .swiper-button-next {
-    color: orange
+    color: orange;
+    right: 0;
 }
 .swiper-button-prev {
    color: orange;
+   left: 0;
 }
