@@ -1,12 +1,18 @@
+import { useRef } from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./styles.css";
 import PopularDish from "./PopularDish";
-import spaghetti from '../../assets/spaghetti.png'
+import spaghetti from "../../assets/spaghetti.png";
 
 const Menu = () => {
+  const clickHandler = (e) => {
+    console.log(e);
+  };
+
   return (
     <section>
       <div className="flex justify-between w-full">
@@ -16,12 +22,14 @@ const Menu = () => {
         <select
           name="menu"
           className="font-bold text-lg border-amber-400 border-2 rounded-full px-6 py-2"
+          defaultValue='Italian'
+          onChange={clickHandler}
         >
-          <option>Italian</option>
-          <option>Mexican</option>
-          <option>Spanish</option>
-          <option>Japanese</option>
-          <option>Greece</option>
+          <option value="Italian" onClick={clickHandler}>Italian</option>
+          <option value="Mexican" onClick={clickHandler}>Mexican</option>
+          <option value="Spanish">Spanish</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Greece">Greece</option>
         </select>
       </div>
       <Swiper

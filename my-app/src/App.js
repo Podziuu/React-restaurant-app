@@ -6,6 +6,8 @@ import MultipleService from "./components/Layout/MultipleService";
 import Menu from "./components/Layout/Menu";
 import Reservation from "./components/Layout/Reservation";
 import Opinions from "./components/Layout/Opinions";
+import Chefs from "./components/Layout/Chefs";
+import Footer from './components/Layout/Footer';
 
 function App() {
   return (
@@ -14,10 +16,12 @@ function App() {
       <Container>
         <MainPart />
         <PopularDishes />
-        <MultipleService/>
+        <MultipleService />
         <Menu />
         <Reservation />
         <Opinions />
+        <Chefs />
+        <Footer />
       </Container>
     </div>
   );
