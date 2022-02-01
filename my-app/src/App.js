@@ -8,11 +8,13 @@ import Reservation from "./components/Layout/Reservation";
 import Opinions from "./components/Layout/Opinions";
 import Chefs from "./components/Layout/Chefs";
 import Footer from './components/Layout/Footer';
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
     <div className="bg-[#F9F3EA]">
       <Navbar />
+      <Cart />
       <Container>
         <MainPart />
         <PopularDishes />
