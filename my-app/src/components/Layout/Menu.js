@@ -70,7 +70,7 @@ const Menu = () => {
         {currentMenu.map(meal => {
           return (
             <SwiperSlide key={meal.id}>
-              <PopularDish photo={meal.photo} text={meal.name} />
+              <PopularDish id={meal.id} photo={meal.photo} text={meal.name} />
             </SwiperSlide>
           )
         })}

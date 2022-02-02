@@ -7,14 +7,18 @@ import Menu from "./components/Layout/Menu";
 import Reservation from "./components/Layout/Reservation";
 import Opinions from "./components/Layout/Opinions";
 import Chefs from "./components/Layout/Chefs";
-import Footer from './components/Layout/Footer';
+import Footer from "./components/Layout/Footer";
 import Cart from "./components/Cart/Cart";
 
+import { useSelector } from "react-redux";
+
 function App() {
+  const isCart = useSelector((state) => state.ui.showCart);
+
   return (
     <div className="bg-[#F9F3EA]">
       <Navbar />
-      <Cart />
+      {isCart && <Cart />}
       <Container>
         <MainPart />
         <PopularDishes />

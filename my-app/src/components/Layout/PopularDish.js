@@ -1,6 +1,15 @@
+import { useDispatch } from 'react-redux'
+import { cartActions } from '../../store/cart-slice';
+
 import Button from './Button'
 
 const PopularDish = (props) => {
+    const dispatch = useDispatch();
+
+    const clickHandler = () => {
+        dispatch(cartActions.addItemToCard({name: props.text, photo: props.photo, price: '$35.00', id: `${props.id}`}))
+    }
+
     return (
         <div className="bg-white rounded-xl flex justfy-center flex-col p-8 w-72 items-center border border-orange-300 mt-4 m-auto">
             <img className='rounded-full border-4 border-slate-800 box-content bg-center' src={props.photo} />
@@ -15,7 +24,7 @@ const PopularDish = (props) => {
             {/* <p className="text-center my-4">Pasta is a type of food typically made from an unleavened dough.</p> */}
             <div className='flex items-center justify-between w-full'>
                 <h3 className="font-bold text-2xl">$35.00</h3>
-                <Button bg={true} text="Add To Cart" />
+                <Button onClick={clickHandler} bg={true} text="Add To Cart" />
             </div>
         </div>
     )

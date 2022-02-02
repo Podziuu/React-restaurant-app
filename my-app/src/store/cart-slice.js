@@ -9,6 +9,17 @@ const cartSlice = createSlice({
   reducers: {
     addItemToCard(state, action) {
       const newItem = action.payload;
+      console.log(action.payload)
+      state.totalQtc++;
+      console.log(state.items)
+      state.items.push({
+        id: newItem.id,
+        name: newItem.name,
+        price: newItem.price,
+        photo: newItem.photo,
+        quantity: 1,
+        totalPrice: newItem.price
+      })
     },
   },
 });
